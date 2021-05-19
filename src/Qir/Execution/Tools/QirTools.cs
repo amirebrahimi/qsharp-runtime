@@ -1,13 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using Microsoft.Quantum.Qir.Tools.Executable;
-using Microsoft.Quantum.QsCompiler;
-using Microsoft.Quantum.QsCompiler.QIR;
 using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Quantum.Qir.Tools.Executable;
+using Microsoft.Quantum.QsCompiler;
+using Microsoft.Quantum.QsCompiler.QIR;
 
 namespace Microsoft.Quantum.Qir.Tools
 {
@@ -34,19 +34,19 @@ namespace Microsoft.Quantum.Qir.Tools
             {
                 throw new ArgumentException("The given DLL does not contain QIR byte code.");
             }
-
+            
             if (!executablesDirectory.Exists)
             {
                 executablesDirectory.Create();
             }
-
+            
             var tasks = EntryPointOperationLoader.LoadEntryPointOperations(qsharpDll).Select(entryPointOp =>
             {
-                var exeFileInfo = new FileInfo(Path.Combine(executablesDirectory.FullName, entryPointOp.Name));
+                var exeFileInfo = new FileInfo(Path.Combine(executablesDirectory.FullName, $"{entryPointOp.Name}.exe"));
                 var exe = new QirFullStateExecutable(exeFileInfo, qirContentStream.ToArray());
                 return exe.BuildAsync(entryPointOp, libraryDirectory, includeDirectory);
             });
-
+            
             await Task.WhenAll(tasks);
 
             // ToDo: Return list of created file names
