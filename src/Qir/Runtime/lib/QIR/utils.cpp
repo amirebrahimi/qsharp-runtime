@@ -11,6 +11,7 @@
 
 #include "QirTypes.hpp"
 #include "QirRuntime.hpp"
+#include "OutputStream.hpp"
 
 static std::unordered_set<char*>& UseMemoryTracker()
 {
@@ -53,7 +54,13 @@ extern "C"
     // Fail the computation with the given error message.
     void quantum__rt__fail(QirString* msg) // NOLINT
     {
-        throw std::runtime_error(msg->str);
+        quantum__rt__fail_cstr(msg->str.c_str());
     }
 
+    void quantum__rt__fail_cstr(const char* cstr)
+    {
+        Microsoft::Quantum::OutputStream::Get() << cstr << std::endl;
+        Microsoft::Quantum::OutputStream::Get().flush();
+        throw std::runtime_error(cstr);
+    }
 }
