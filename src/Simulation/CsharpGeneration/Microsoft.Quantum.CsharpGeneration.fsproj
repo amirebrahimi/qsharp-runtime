@@ -4,7 +4,7 @@
   
   <PropertyGroup>
     <AssemblyName>Microsoft.Quantum.CsharpGeneration</AssemblyName>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,10 +21,39 @@
 
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="4.7.0" />
-    <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20082705-beta" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RoslynWrapper\Microsoft.Quantum.RoslynWrapper.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Quantum.QsCompilationManager">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsCompilationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Quantum.QsCompiler">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Quantum.QsCore">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Quantum.QsDataStructures">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsDataStructures.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Quantum.QsDocumentationParser">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsDocumentationParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Quantum.QsOptimizations">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsOptimizations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Quantum.QsSyntaxProcessor">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsSyntaxProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Quantum.QsTextProcessor">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsTextProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Quantum.QsTransformations">
+      <HintPath>..\..\..\..\qsharp-compiler\src\QsCompiler\Compiler\bin\Debug\netstandard2.0\Microsoft.Quantum.QsTransformations.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

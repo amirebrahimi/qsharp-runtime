@@ -15,16 +15,16 @@
         "Microsoft.Quantum.Xunit"
     );
     Assemblies = @(
-        ".\src\Azure\Azure.Quantum.Client\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Azure.Quantum.Client.dll",
-        ".\src\Simulation\CsharpGeneration\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Quantum.CsharpGeneration.dll",
+        ".\src\Azure\Azure.Quantum.Client\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Azure.Quantum.Client.dll",
+        ".\src\Simulation\CsharpGeneration\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Quantum.CsharpGeneration.dll",
         ".\src\Simulation\CsharpGeneration.App\bin\$Env:BUILD_CONFIGURATION\netcoreapp3.1\Microsoft.Quantum.CsharpGeneration.App.dll",
         ".\src\Simulation\CsharpGeneration.App\bin\$Env:BUILD_CONFIGURATION\netcoreapp3.1\Microsoft.Quantum.RoslynWrapper.dll",
-        ".\src\Simulation\Core\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Quantum.Runtime.Core.dll",
-        ".\src\Simulation\EntryPointDriver\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Quantum.EntryPointDriver.dll",
-        ".\src\Simulation\QsharpCore\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Quantum.QSharp.Core.dll",
-        ".\src\Simulation\Simulators\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Quantum.Simulation.Common.dll",
-        ".\src\Simulation\Simulators\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll",
-        ".\src\Simulation\Simulators\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Quantum.Simulators.dll",
-        ".\src\Xunit\bin\$Env:BUILD_CONFIGURATION\netstandard2.1\Microsoft.Quantum.Xunit.dll"
+        ".\src\Simulation\Core\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Quantum.Runtime.Core.dll",
+        ".\src\Simulation\EntryPointDriver\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Quantum.EntryPointDriver.dll",
+        ".\src\Simulation\QsharpCore\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Quantum.QSharp.Core.dll",
+        ".\src\Simulation\Simulators\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Quantum.Simulation.Common.dll",
+        ".\src\Simulation\Simulators\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll",
+        ".\src\Simulation\Simulators\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Quantum.Simulators.dll",
+        ".\src\Xunit\bin\$Env:BUILD_CONFIGURATION\netstandard2.0\Microsoft.Quantum.Xunit.dll"
     ) | ForEach-Object { Get-Item (Join-Path $PSScriptRoot (Join-Path ".." $_)) };
 } | Write-Output;

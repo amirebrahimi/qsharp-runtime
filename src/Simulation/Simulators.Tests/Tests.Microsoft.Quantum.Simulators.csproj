@@ -9,6 +9,7 @@
     <IncludeQsharpCorePackages>false</IncludeQsharpCorePackages>
     <CsharpGeneration>false</CsharpGeneration><!-- we will provide our own -->
     <IsPackable>false</IsPackable>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

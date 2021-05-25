@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.Quantum.Sdk/0.12.20082705-beta">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <CsharpGeneration>false</CsharpGeneration>
     <IncludeQsharpCorePackages>false</IncludeQsharpCorePackages>
   
@@ -8,6 +8,7 @@
        - file paths in the annotations are invalid, the test will fail.
        -->
     <EmbedAllSources>true</EmbedAllSources>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

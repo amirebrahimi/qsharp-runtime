@@ -83,7 +83,7 @@ namespace Microsoft.Quantum.Simulation
                     ? 0
                     : 8 - nBytes
                 );
-                return System.BitConverter.ToInt64(padded) >> nExcessBits;
+                return System.BitConverter.ToInt64(padded!, 0) >> nExcessBits;
             };
             
             var nBits = (int) (System.Math.Log(upperExclusive, 2) + 1);

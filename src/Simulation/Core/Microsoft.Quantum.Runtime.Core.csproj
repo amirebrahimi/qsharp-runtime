@@ -3,7 +3,8 @@
   <Import Project="..\Common\DebugSymbols.props" />
   
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LanguageVersion>8.0</LanguageVersion>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
@@ -16,6 +17,7 @@
     <PackageIcon>qdk-nuget-icon.png</PackageIcon>
     <PackageTags>Quantum Q# Qsharp</PackageTags>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>  
   
   <ItemGroup>
@@ -23,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 

@@ -9,6 +9,7 @@
     <IncludeProviderPackages>false</IncludeProviderPackages>
     <NoEntryPoint>true</NoEntryPoint>
     <ExecutionTarget>ionq.qpu</ExecutionTarget>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

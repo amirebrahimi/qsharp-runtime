@@ -38,8 +38,8 @@ namespace Microsoft.Azure.Quantum.Authentication
                         header
                             .Parameter
                             .Replace("Bearer ", string.Empty)
-                            .Split(",")
-                            .Select(part => part.Split("="))
+                            .Split(',')
+                            .Select(part => part.Split('='))
                             .ToDictionary(rg => rg[0], rg => rg[1])["authorization_uri"]
                             .Trim('\'', '"');
 
